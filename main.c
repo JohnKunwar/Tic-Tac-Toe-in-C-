@@ -22,10 +22,10 @@ int main(void)
 
 		    // Input
 		    printf("Enter your move: ");
-		    while(fgets(c, 100, stdin)) // runs until correct input has been written
+		    while(fgets(c, 100, stdin)) // runs until correct input correct input has been written
 			{
 			    num = atoi(c);
-			    if (num >= 1 && num <= 9)
+			    if ( (num >= 1 && num <= 9) && ( check_availabity(num, &board) ) )   
 				{
 				    break;			    
 				}
@@ -49,12 +49,14 @@ int main(void)
 			    draw_celeberation();
 			    break;
 			}
+		    
 		    // call bot
-		    num = bot_move(&board);
-		    sleep(1);
+		    printf("\nBot move:\n");
+		    num = bot_move(&board); // bot moves includes check_availability
 		    draw_board(&board);
-		    // Check whether win
-		     v_check = verdict_check(&board, num); // 1 means win, -1 means draw and 0 means nothing happen
+		    
+		    // Check whether bot win
+		    v_check = verdict_check(&board, num); // 1 means win, -1 means draw and 0 means nothing happen
 		    if (v_check == 1)
 			{
 			    loss_celeberation();
@@ -66,6 +68,14 @@ int main(void)
 			    break;
 			}		    
 		}
+
+	    // next game ? 
+	    char c[100];
+	    printf("Do you want to play again(press any key expect q): ");
+	    fgets(c, 100, stdin);
+	    
+	    if (c[0] == 'q' || c[0] == 'Q')
+		game_on = false;
 	}
     
     return 0;

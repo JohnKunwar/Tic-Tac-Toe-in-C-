@@ -92,13 +92,4 @@ void draw_board(struct board_stage *board)
     // Third row
     printf("\t\t\t\t\t %c ┃ %c ┃ %c \n", board->row3_1, board->row3_2, board->row3_3);
 
-
-        for (int i = 0; i < 3; i++)
-	{
-	    for (int j = 0; j < 3; j++)
-		printf("%i ",board->arr[i][j]);
-
-	    printf("\n");
-	}
-
 }

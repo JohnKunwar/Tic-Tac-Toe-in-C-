@@ -108,7 +108,6 @@ bool draw(struct board_stage *board)
 		}
 	}
 
-    printf("count: %i\n", count);
     if (count == 9)
 	return true;
 
@@ -123,12 +122,10 @@ int verdict_check(struct board_stage *board, int num)
     bool is_draw = draw(board);
     if (won == true)
 	{
-	    printf("won\n");
 	    return 1; 
 	}
     else if (is_draw == true)
 	{
-	    printf("draw\n");
 	    return -1;
 	}
     

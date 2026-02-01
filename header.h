@@ -3,7 +3,12 @@
 #include <stdlib.h>
 #include <time.h>
 
-
+// Escape sequence
+/*
+#define RED "\033[31m"
+#define RESET_COLOR "\033[0m"
+#define GREEN "\033[34m"
+*/
 
 struct map_array_num{
     int i, j;
@@ -27,6 +32,7 @@ void change_bot_stage(int , struct board_stage *);
 int verdict_check(struct board_stage *board, int num);
 void won_celeberation();
 int bot_move(struct board_stage *board);
+
 bool check_availabity(int num, struct board_stage *board);
 void intro();
 void draw_celeberation();
