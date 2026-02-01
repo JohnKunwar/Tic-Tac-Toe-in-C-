@@ -1,8 +1,17 @@
 #include "header.h"
 
 
-// should contain win/loss/draw condition
+// check availability of move
+bool check_availabity(int num, struct board_stage *board)
+{
+    if(board->arr[board->map[num - 1].i][board->map[num - 1].j] != 0)
+	return false;
 
+    return true;
+}
+
+
+// should contain win/loss/draw condition
 // This checks only row,columun,diagonal that is affect by current move not everything. 
 bool win_check (struct board_stage *board, int num)
 {

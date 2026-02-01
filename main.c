@@ -33,8 +33,8 @@ int main(void)
 	    // Update board
 	    change_player_stage(num, &board);
 
-	    // call bot
-	    bot_move(&board);
+
+
 
 	    // Check whether win
 	    int v_check = verdict_check(&board, num); // 1 means win, -1 means draw and 0 means nothing happen
@@ -46,6 +46,9 @@ int main(void)
 		{
 		    printf("draw\n");
 		}
+	    
+	    // call bot
+	    bot_move(&board);
 	}
 
     

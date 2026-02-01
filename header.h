@@ -4,11 +4,15 @@
 #include <time.h>
 
 
-// structure to hold the stage of the value in each block of game. stage could be X,O or -
 
+struct map_array_num{
+    int i, j;
+};
+// structure to hold the stage of the value in each block of game. stage could be X,O or -
 struct board_stage
 {
     int arr[3][3];
+    struct map_array_num map[9];
     
     char row1_1, row1_2, row1_3;
     char row2_1, row2_2, row2_3;
@@ -23,3 +27,4 @@ void change_bot_stage(int , struct board_stage *);
 int verdict_check(struct board_stage *board, int num);
 void won_celeberation();
 void bot_move(struct board_stage *board);
+bool check_availabity(int num, struct board_stage *board);

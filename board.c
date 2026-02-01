@@ -4,10 +4,17 @@ char player_or_bot = 'X';
 // set all the value in board to 0
 void init_board_stage(struct board_stage *board)
 {
+    int count = 0;
     for (int i = 0; i < 3; i++)
 	{
 	    for (int j = 0; j < 3; j++)
-		board->arr[i][j] = 0;
+		{
+		    board->arr[i][j] = 0;
+		    board->map[count].i = i;
+		    board->map[count].j = j;
+		    count++;
+		}
+
 	}
     
     board->row1_1= ' '; board->row1_2= ' '; board->row1_3= ' ';
