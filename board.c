@@ -83,14 +83,14 @@ void change_bot_stage(int num, struct board_stage *board)
 void draw_board(struct board_stage *board)
 {
     // First row
-    printf("\n\t\t\t\t %c ┃ %c ┃ %c \n", board->row1_1, board->row1_2, board->row1_3);
-    printf("\t\t\t\t━━━━━━━━━━━\n");
+    printf("\n\t\t\t\t\t %c ┃ %c ┃ %c \n", board->row1_1, board->row1_2, board->row1_3);
+    printf("\t\t\t\t\t━━━━━━━━━━━\n");
 
     // Second row
-    printf("\t\t\t\t %c ┃ %c ┃ %c \n", board->row2_1, board->row2_2, board->row2_3);
-    printf("\t\t\t\t━━━━━━━━━━━\n");    
+    printf("\t\t\t\t\t %c ┃ %c ┃ %c \n", board->row2_1, board->row2_2, board->row2_3);
+    printf("\t\t\t\t\t━━━━━━━━━━━\n");    
     // Third row
-    printf("\t\t\t\t %c ┃ %c ┃ %c \n", board->row3_1, board->row3_2, board->row3_3);
+    printf("\t\t\t\t\t %c ┃ %c ┃ %c \n", board->row3_1, board->row3_2, board->row3_3);
 
 
         for (int i = 0; i < 3; i++)
