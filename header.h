@@ -25,6 +25,7 @@ struct board_stage
 };
 
 // functions
+bool win_check (struct board_stage *board, int num);
 void init_board_stage(struct board_stage *); // initalize the board
 void draw_board(struct board_stage *); // draws the board
 void change_player_stage(int , struct board_stage *);
@@ -32,7 +33,6 @@ void change_bot_stage(int , struct board_stage *);
 int verdict_check(struct board_stage *board, int num);
 void won_celeberation();
 int bot_move(struct board_stage *board);
-
 bool check_availabity(int num, struct board_stage *board);
 void intro();
 void draw_celeberation();

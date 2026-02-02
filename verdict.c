@@ -95,6 +95,7 @@ bool win_check (struct board_stage *board, int num)
     
     return false;
 }
+
 bool draw(struct board_stage *board)
 {
     int count = 0;
